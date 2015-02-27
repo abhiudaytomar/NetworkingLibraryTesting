@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NetworkingLibraryTesting</string>
+    <string name="app_name">Network Library Test</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
@@ -9,5 +9,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="retrofit_networking_framework">Retrofit</string>
+    <string name="okHTTP_networking_framework">OkHTTP</string>
+    <string name="volley_networking_framework">Volley</string>
+    <string name="fragment_text">This is a fragment</string>
 
 </resources>
