@@ -9,6 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 public abstract class BaseActivity extends ActionBarActivity {
@@ -24,7 +30,13 @@ public abstract class BaseActivity extends ActionBarActivity {
     private Handler mHandler;
     private int mThemedStatusBarColor;
     private int mNormalStatusBarColor;
-
+    private ListView mNavDrawerList;
+    private ArrayList<String> mNavDrawerItems = new ArrayList<String>();
+    
+    protected static final int NAVDRAWER_RETROFIT = 0;
+    protected static final int NAVDRAWER_OKHTTP = 1;
+    protected static final int NAVDRAWER_VOLLEY = 2;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +72,22 @@ public abstract class BaseActivity extends ActionBarActivity {
                 }
             });
         }
+        
+        populateNavDrawer();
+    }
+
+    private void populateNavDrawer() {
+        mNavDrawerItems.clear();
+        mNavDrawerItems.add(getString(R.string.retrofit_networking_framework));
+        mNavDrawerItems.add(getString(R.string.okHTTP_networking_framework));
+        mNavDrawerItems.add(getString(R.string.volley_networking_framework));
+        createNavDrawer();
+    }
+
+    private void createNavDrawer() {
+        mNavDrawerList = (ListView)findViewById(R.id.nav_drawer);
+        mNavDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, mNavDrawerItems));
+        mNavDrawerList.setOnItemClickListener(new NavDrawerItemClickListener());
     }
 
     @Override
@@ -93,4 +121,11 @@ public abstract class BaseActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private class NavDrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            String message = "This " + mNavDrawerItems.get(position) + "has been clicked";
+            Toast.makeText(getBaseContext(), message, Toast.LENGTH_SHORT).show();
+        }
+    }
 }
