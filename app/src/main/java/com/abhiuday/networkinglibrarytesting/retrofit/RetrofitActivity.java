@@ -32,16 +32,11 @@ public class RetrofitActivity extends BaseActivity{
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setCustomTabView(R.layout.tab_indicator, android.R.id.text1);
 
-        setSlidingTabLayoutContentDescriptions();
 
         Resources res = getResources();
         mSlidingTabLayout.setSelectedIndicatorColors(res.getColor(R.color.tab_selected_strip));
         mSlidingTabLayout.setDistributeEvenly(true);
         mSlidingTabLayout.setViewPager(mViewPager);
-
-    }
-
-    private void setSlidingTabLayoutContentDescriptions() {
 
     }
 
@@ -57,6 +52,8 @@ public class RetrofitActivity extends BaseActivity{
                     return new RetrofitTumblrImagesFragment();
                 case 1:
                     return new RetrofitRPCallsFragment();
+                case 2 :
+                    return new RetrofitRPCallsFragment();
                 default:
                     return null;
             }
@@ -64,16 +61,18 @@ public class RetrofitActivity extends BaseActivity{
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "One";
+                    return "Tumblr Calls";
                 case 1:
-                    return "Two";
+                    return "RP calls";
+                case 2:
+                    return "Get it done calls";
                 default:
                     return "One";
             }
