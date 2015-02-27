@@ -8,6 +8,8 @@
     <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <style name="TabIndicator" />
+    
     <style name="ActionBarThemeOverlay" parent="">
         <item name="android:textColorPrimary">#fff</item>
         <item name="colorControlNormal">?actionBarIconColor</item>

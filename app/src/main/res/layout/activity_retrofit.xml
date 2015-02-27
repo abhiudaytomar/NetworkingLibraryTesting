@@ -19,8 +19,18 @@
                       android:orientation="vertical">
 
             <include layout="@layout/toolbar_actionbar" />
+            <com.abhiuday.networkinglibrarytesting.widget.SlidingTabLayout
+                android:background="@color/tab_background"
+                android:id="@+id/sliding_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <ListView

@@ -5,5 +5,5 @@
           android:text="New Text"
           android:textSize="30dp"
           android:gravity="center"
-          android:background="@color/nav_drawer_color"
+          android:background="@color/tab_background"
           android:id="@+id/textView"/>
