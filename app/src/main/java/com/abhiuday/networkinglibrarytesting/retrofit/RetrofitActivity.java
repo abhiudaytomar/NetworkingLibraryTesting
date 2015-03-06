@@ -16,6 +16,7 @@ import com.abhiuday.networkinglibrarytesting.widget.SlidingTabLayout;
  Created by abhiuday.tomar on 26/02/15.
  */
 public class RetrofitActivity extends BaseActivity{
+    private static final String TAG = "RetrofitActivity";
     private ViewPager mViewPager;
     private ActionBar actionBar;
     private OurViewPagerAdapter mViewPagerAdapter;
@@ -38,6 +39,10 @@ public class RetrofitActivity extends BaseActivity{
         mSlidingTabLayout.setDistributeEvenly(true);
         mSlidingTabLayout.setViewPager(mViewPager);
 
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     private class OurViewPagerAdapter extends FragmentPagerAdapter {

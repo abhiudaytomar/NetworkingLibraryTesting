@@ -1363,13 +1363,13 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f08001f;
         public static final int action_bar_title=0x7f08001e;
         public static final int action_context_bar=0x7f080032;
-        public static final int action_example=0x7f080047;
+        public static final int action_example=0x7f080048;
         public static final int action_menu_divider=0x7f080002;
         public static final int action_menu_presenter=0x7f080003;
         public static final int action_mode_bar=0x7f08002e;
         public static final int action_mode_bar_stub=0x7f08002d;
         public static final int action_mode_close_button=0x7f080020;
-        public static final int action_settings=0x7f080046;
+        public static final int action_settings=0x7f080047;
         public static final int activity_chooser_view_content=0x7f080021;
         public static final int always=0x7f080016;
         public static final int beginning=0x7f080013;
@@ -1392,6 +1392,7 @@ containing a value of this type.
         public static final int image=0x7f080023;
         public static final int listMode=0x7f080009;
         public static final int list_item=0x7f080025;
+        public static final int loginbutton=0x7f080045;
         public static final int main_content=0x7f080040;
         public static final int middle=0x7f080015;
         public static final int nav_drawer=0x7f080043;
@@ -1421,7 +1422,7 @@ containing a value of this type.
         public static final int tabMode=0x7f08000b;
         public static final int textView=0x7f080044;
         public static final int title=0x7f080027;
-        public static final int toolbar_actionbar=0x7f080045;
+        public static final int toolbar_actionbar=0x7f080046;
         public static final int up=0x7f080008;
         public static final int useLogo=0x7f080012;
         public static final int view_pager=0x7f080042;
