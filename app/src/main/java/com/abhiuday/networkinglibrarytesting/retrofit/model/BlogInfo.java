@@ -1,9 +1,7 @@
 
 package com.abhiuday.networkinglibrarytesting.retrofit.model;
 
-import java.io.Serializable;
-
-public class BlogInfo implements Serializable {
+public class BlogInfo {
    	private boolean ask;
    	private boolean ask_anon;
    	private String ask_page_title;

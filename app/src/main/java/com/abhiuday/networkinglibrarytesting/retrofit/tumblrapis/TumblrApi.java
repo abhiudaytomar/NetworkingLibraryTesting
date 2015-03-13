@@ -16,7 +16,4 @@ public interface TumblrApi {
     @GET("/blog/{base-hostname}/info")
     public void getBlogInfo(@Path("base-hostname") String hostname, @Query("api_key") String oauth_verifier, Callback<BlogInfo> cb);
 
-    @GET("/blog/{base-hostname}/info")
-    public void getBlogInfoV1(@Path("base-hostname") String hostname, Callback<BlogInfo> cb);
-    
 }
